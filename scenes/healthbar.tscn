@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bgbom06qspwrj"]
+
+[ext_resource type="Script" uid="uid://fyy03pymrkx8" path="res://script/healthbar.gd" id="1_8wl12"]
+
+[node name="healthbar" type="Sprite2D"]
+script = ExtResource("1_8wl12")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0

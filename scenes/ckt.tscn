@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=3 uid="uid://bt4oce8d58olu"]
+
+[ext_resource type="Script" uid="uid://d0w2ohn7q256w" path="res://script/ckt.gd" id="1_2ctp1"]
+[ext_resource type="PackedScene" uid="uid://dsxy0iydhvbxx" path="res://scenes/star_pin.tscn" id="2_dfuw6"]
+[ext_resource type="Script" uid="uid://bnsiotl5uq8m1" path="res://script/line_drawer.gd" id="3_dfuw6"]
+[ext_resource type="Texture2D" uid="uid://cdvew8pgexlpx" path="res://assets/bg/actual ckt.png" id="3_t3fy3"]
+[ext_resource type="FontFile" uid="uid://c0mbq8w41h7cw" path="res://assets/audio/PixelOperator8.ttf" id="6_r6q31"]
+[ext_resource type="AudioStream" uid="uid://xtly6jq3fjuf" path="res://assets/player/8bit-music-for-game-68698.mp3" id="6_tlxjo"]
+
+[node name="ckt" type="Node2D"]
+script = ExtResource("1_2ctp1")
+pin_scene = ExtResource("2_dfuw6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(578, 227)
+scale = Vector2(2, 1.791)
+texture = ExtResource("3_t3fy3")
+
+[node name="lineDrawer" type="Node2D" parent="."]
+script = ExtResource("3_dfuw6")
+drawing_color = Color(0.899057, 0.973685, 1, 1)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 11.0
+offset_top = 12.0
+offset_right = 243.0
+offset_bottom = 191.0
+theme_override_fonts/font = ExtResource("6_r6q31")
+text = "Press spacebar to go back and look at the reference
+
+Press enter to fix the puzzle and end the game
+"
+autowrap_mode = 3
+
+[node name="start_sfx" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_tlxjo")
+volume_db = 5.413
+pitch_scale = 1.3
+max_distance = 4096.0
+attenuation = 1.7411

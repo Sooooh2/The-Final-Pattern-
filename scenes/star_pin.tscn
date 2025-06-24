@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dsxy0iydhvbxx"]
+
+[ext_resource type="Texture2D" uid="uid://cie5qvqejtodb" path="res://assets/player/bullet1-sheet.png" id="1_lud10"]
+[ext_resource type="Script" uid="uid://bp0kmcx026pii" path="res://script/star_pin.gd" id="1_nuv40"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lud10"]
+radius = 4.0
+
+[node name="star_pin" type="Area2D"]
+script = ExtResource("1_nuv40")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1.8, 1.8)
+texture = ExtResource("1_lud10")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(1.5, 1.5)
+shape = SubResource("CircleShape2D_lud10")
+
+[connection signal="pin_clicked" from="." to="." method="_on_pin_clicked"]

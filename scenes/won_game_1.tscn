@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=3 uid="uid://dw221knlqmlk0"]
+
+[ext_resource type="Texture2D" uid="uid://da4fkwvrgfgg1" path="res://assets/bg/planet.png" id="1_dmo2f"]
+[ext_resource type="Script" uid="uid://quyu4j2v0e7" path="res://scenes/won_game_1.gd" id="1_grgwf"]
+[ext_resource type="FontFile" uid="uid://c0mbq8w41h7cw" path="res://assets/audio/PixelOperator8.ttf" id="2_651ma"]
+[ext_resource type="Texture2D" uid="uid://m684mp2ltc7y" path="res://scenes/PLANET111Q1 - Copy.png" id="3_aw0r6"]
+[ext_resource type="AudioStream" uid="uid://xtly6jq3fjuf" path="res://assets/player/8bit-music-for-game-68698.mp3" id="4_bohxy"]
+[ext_resource type="Texture2D" uid="uid://donkgqfsr5o7s" path="res://scenes/shipFinal.png" id="6_o4es6"]
+
+[node name="won_game1" type="Node2D"]
+script = ExtResource("1_grgwf")
+
+[node name="won" type="Sprite2D" parent="."]
+position = Vector2(449, 227.5)
+scale = Vector2(1.9, 1.72963)
+texture = ExtResource("1_dmo2f")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(447, 224)
+texture = ExtResource("3_aw0r6")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 283.0
+offset_top = 158.0
+offset_right = 613.0
+offset_bottom = 198.0
+theme_override_fonts/font = ExtResource("2_651ma")
+theme_override_font_sizes/font_size = 40
+text = "YOU WON !! "
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 535.0
+offset_top = 424.0
+offset_right = 899.0
+offset_bottom = 447.0
+theme_override_fonts/font = ExtResource("2_651ma")
+text = "Press space to continue ......"
+
+[node name="game_sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_bohxy")
+
+[node name="ShipFinal" type="Sprite2D" parent="."]
+position = Vector2(643, 174)
+texture = ExtResource("6_o4es6")

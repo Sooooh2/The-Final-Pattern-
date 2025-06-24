@@ -1,0 +1,201 @@
+[gd_scene load_steps=6 format=3 uid="uid://jl02vl863p6j"]
+
+[ext_resource type="Texture2D" uid="uid://ddp61dyh4aarv" path="res://scenes/guy whale canvo.png" id="1_u1mnf"]
+[ext_resource type="Script" uid="uid://d0dgp4ajkxx02" path="res://scenes/whale_convo.gd" id="1_xlnqh"]
+[ext_resource type="FontFile" uid="uid://c0mbq8w41h7cw" path="res://assets/audio/PixelOperator8.ttf" id="2_bpnjy"]
+[ext_resource type="Texture2D" uid="uid://b47pm4gjx2pdg" path="res://assets/bg/constellation.png" id="4_btwqr"]
+[ext_resource type="AudioStream" uid="uid://br028xa8w88wk" path="res://scenes/magical-transition-144153.mp3" id="5_4317f"]
+
+[node name="whale_convo" type="Node2D"]
+script = ExtResource("1_xlnqh")
+
+[node name="convo1" type="Sprite2D" parent="."]
+position = Vector2(437.5, 235)
+scale = Vector2(1.95208, 1.93333)
+texture = ExtResource("1_u1mnf")
+
+[node name="ColorRect2" type="ColorRect" parent="convo1"]
+offset_left = -254.0
+offset_top = -131.0
+offset_right = 256.0
+offset_bottom = -91.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="convo1"]
+offset_left = -211.313
+offset_top = -113.793
+offset_right = 231.687
+offset_bottom = -64.7931
+theme_override_fonts/font = ExtResource("2_bpnjy")
+theme_override_font_sizes/font_size = 8
+text = "Thankyou for saving my life. you are a good being. "
+autowrap_mode = 3
+
+[node name="Label2" type="Label" parent="convo1"]
+offset_left = 26.8944
+offset_top = 98.2758
+offset_right = 229.894
+offset_bottom = 121.276
+theme_override_fonts/font = ExtResource("2_bpnjy")
+theme_override_font_sizes/font_size = 10
+text = "Press space to conitnue"
+
+[node name="convo2" type="Sprite2D" parent="."]
+position = Vector2(437.5, 235)
+scale = Vector2(1.95208, 1.93333)
+texture = ExtResource("1_u1mnf")
+
+[node name="ColorRect" type="ColorRect" parent="convo2"]
+offset_left = -257.417
+offset_top = -122.586
+offset_right = 252.583
+offset_bottom = -82.5862
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="convo2"]
+offset_left = -211.313
+offset_top = -113.793
+offset_right = 231.687
+offset_bottom = -64.7931
+theme_override_fonts/font = ExtResource("2_bpnjy")
+theme_override_font_sizes/font_size = 8
+text = "Me and my fellow beings are getting targeted for our magical skins. "
+autowrap_mode = 3
+
+[node name="Label2" type="Label" parent="convo2"]
+offset_left = 26.8944
+offset_top = 98.2758
+offset_right = 229.894
+offset_bottom = 121.276
+theme_override_fonts/font = ExtResource("2_bpnjy")
+theme_override_font_sizes/font_size = 10
+text = "Press space to conitnue"
+
+[node name="convo3" type="Sprite2D" parent="."]
+position = Vector2(437.5, 235)
+scale = Vector2(1.95208, 1.93333)
+texture = ExtResource("1_u1mnf")
+
+[node name="ColorRect" type="ColorRect" parent="convo3"]
+offset_left = -257.417
+offset_top = -122.586
+offset_right = 252.583
+offset_bottom = -82.5862
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="convo3"]
+offset_left = -211.313
+offset_top = -113.793
+offset_right = 231.687
+offset_bottom = -64.7931
+theme_override_fonts/font = ExtResource("2_bpnjy")
+theme_override_font_sizes/font_size = 8
+text = "That is so terrible. I can assure you are safe with me, I have no intentiion of hurting yo-..... Woah what is that?"
+autowrap_mode = 3
+
+[node name="Label2" type="Label" parent="convo3"]
+offset_left = 26.8944
+offset_top = 98.2758
+offset_right = 229.894
+offset_bottom = 121.276
+theme_override_fonts/font = ExtResource("2_bpnjy")
+theme_override_font_sizes/font_size = 10
+text = "Press space to conitnue"
+
+[node name="convo6" type="Sprite2D" parent="."]
+position = Vector2(437.5, 235)
+scale = Vector2(1.95208, 1.93333)
+texture = ExtResource("1_u1mnf")
+
+[node name="ColorRect" type="ColorRect" parent="convo6"]
+offset_left = -257.417
+offset_top = -122.586
+offset_right = 252.583
+offset_bottom = -82.5862
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="convo6"]
+offset_left = -211.313
+offset_top = -113.793
+offset_right = 231.687
+offset_bottom = -64.7931
+theme_override_fonts/font = ExtResource("2_bpnjy")
+theme_override_font_sizes/font_size = 8
+text = "You would do such a thing for a stranger? I promise to protect you moving on now no matter what happens."
+autowrap_mode = 3
+
+[node name="Label2" type="Label" parent="convo6"]
+offset_left = 26.8944
+offset_top = 98.2758
+offset_right = 229.894
+offset_bottom = 121.276
+theme_override_fonts/font = ExtResource("2_bpnjy")
+theme_override_font_sizes/font_size = 10
+text = "Press space to conitnue"
+
+[node name="convo4" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(440, 235)
+scale = Vector2(1.93542, 1.85185)
+texture = ExtResource("4_btwqr")
+
+[node name="ColorRect" type="ColorRect" parent="convo4"]
+offset_left = -262.476
+offset_top = 78.3
+offset_right = 247.524
+offset_bottom = 118.3
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="convo4"]
+offset_left = -219.591
+offset_top = 90.72
+offset_right = 223.409
+offset_bottom = 139.72
+theme_override_fonts/font = ExtResource("2_bpnjy")
+theme_override_font_sizes/font_size = 8
+text = "That is my friends sending me a signal, if only i could remember the position, i would be able to go and save my other trapped friends. "
+autowrap_mode = 3
+
+[node name="Label2" type="Label" parent="convo4"]
+offset_left = 56.3186
+offset_top = 68.04
+offset_right = 259.319
+offset_bottom = 91.04
+theme_override_fonts/font = ExtResource("2_bpnjy")
+theme_override_font_sizes/font_size = 10
+text = "Press space to conitnue"
+
+[node name="convo5" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(440, 235)
+scale = Vector2(1.93542, 1.85185)
+texture = ExtResource("4_btwqr")
+
+[node name="ColorRect" type="ColorRect" parent="convo5"]
+offset_left = -262.476
+offset_top = 78.3
+offset_right = 247.524
+offset_bottom = 118.3
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="convo5"]
+offset_left = -219.591
+offset_top = 90.72
+offset_right = 223.409
+offset_bottom = 139.72
+theme_override_fonts/font = ExtResource("2_bpnjy")
+theme_override_font_sizes/font_size = 8
+text = "Oh, no problem. I can match this on my circuit board and we will have a record of it. Then we can save your other friends. "
+autowrap_mode = 3
+
+[node name="Label2" type="Label" parent="convo5"]
+offset_left = 56.3186
+offset_top = 68.04
+offset_right = 259.319
+offset_bottom = 91.04
+theme_override_fonts/font = ExtResource("2_bpnjy")
+theme_override_font_sizes/font_size = 10
+text = "Press space to conitnue"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_4317f")

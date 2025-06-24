@@ -1,0 +1,165 @@
+[gd_scene load_steps=11 format=3 uid="uid://dwxxmiospdomp"]
+
+[ext_resource type="Script" uid="uid://bm0r4mhqwuno8" path="res://script/starting_scene.gd" id="1_ileah"]
+[ext_resource type="Texture2D" uid="uid://by3266i6fydvb" path="res://assets/bg/frame1.png" id="1_jjbkj"]
+[ext_resource type="Texture2D" uid="uid://ly3cn58ekemy" path="res://assets/bg/guycloseup.png" id="2_y3y55"]
+[ext_resource type="FontFile" uid="uid://c0mbq8w41h7cw" path="res://assets/audio/PixelOperator8.ttf" id="3_8rk36"]
+[ext_resource type="Texture2D" uid="uid://d0n0ieyxtlton" path="res://assets/bg/frame3.png" id="3_oemso"]
+[ext_resource type="Texture2D" uid="uid://bv5oar2bdf4eb" path="res://assets/bg/frame2.png" id="4_eq0bj"]
+[ext_resource type="AudioStream" uid="uid://chuudqo30qu1i" path="res://assets/audio/creepy-whale-song-323612.mp3" id="6_oemso"]
+[ext_resource type="AudioStream" uid="uid://3trn26qjqcqo" path="res://scenes/space-ship-bridge-loop-104525.mp3" id="8_y3y55"]
+[ext_resource type="AudioStream" uid="uid://br028xa8w88wk" path="res://scenes/magical-transition-144153.mp3" id="9_p1fr0"]
+[ext_resource type="Texture2D" uid="uid://t6utlm345u7f" path="res://assets/bg/PLANET111Q1 - Copy.jpg" id="10_12scp"]
+
+[node name="starting_scene" type="Node2D"]
+script = ExtResource("1_ileah")
+
+[node name="f4" type="Sprite2D" parent="."]
+position = Vector2(463, 233)
+scale = Vector2(1.91354, 1.76667)
+texture = ExtResource("2_y3y55")
+
+[node name="ColorRect3" type="ColorRect" parent="f4"]
+offset_left = -241.96
+offset_top = 87.3081
+offset_right = 244.04
+offset_bottom = 127.308
+color = Color(0, 0, 0, 1)
+
+[node name="Label4" type="Label" parent="f4"]
+offset_left = 81.0017
+offset_top = 110.377
+offset_right = 229.002
+offset_bottom = 133.377
+theme_override_fonts/font = ExtResource("3_8rk36")
+theme_override_font_sizes/font_size = 8
+text = "Press space to continue"
+
+[node name="Label" type="Label" parent="f4"]
+offset_left = -224.714
+offset_top = 93.9621
+offset_right = 173.286
+offset_bottom = 129.962
+theme_override_fonts/font = ExtResource("3_8rk36")
+theme_override_font_sizes/font_size = 9
+text = "Oh what?? 
+Hey stop that right now "
+autowrap_mode = 3
+
+[node name="f3" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(451, 224)
+scale = Vector2(1.87917, 1.67407)
+texture = ExtResource("3_oemso")
+
+[node name="ColorRect3" type="ColorRect" parent="f3"]
+offset_left = -248.0
+offset_top = 106.0
+offset_right = 241.0
+offset_bottom = 146.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label4" type="Label" parent="f3"]
+offset_left = 84.6118
+offset_top = 120.067
+offset_right = 325.612
+offset_bottom = 151.067
+theme_override_fonts/font = ExtResource("3_8rk36")
+theme_override_font_sizes/font_size = 8
+text = "Press space to continue"
+
+[node name="f2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(451, 238)
+scale = Vector2(1.87917, 1.79259)
+texture = ExtResource("4_eq0bj")
+
+[node name="ColorRect2" type="ColorRect" parent="f2"]
+offset_left = -240.0
+offset_top = 83.2564
+offset_right = 246.0
+offset_bottom = 123.256
+color = Color(0, 0, 0, 1)
+
+[node name="Label3" type="Label" parent="f2"]
+offset_left = 88.869
+offset_top = 105.992
+offset_right = 236.869
+offset_bottom = 128.992
+theme_override_fonts/font = ExtResource("3_8rk36")
+theme_override_font_sizes/font_size = 8
+text = "Press space to continue"
+
+[node name="whale_sound" type="AudioStreamPlayer2D" parent="f2"]
+stream = ExtResource("6_oemso")
+volume_db = 18.353
+pitch_scale = 0.98
+
+[node name="f1" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(447, 225)
+scale = Vector2(1.88021, 1.92037)
+texture = ExtResource("1_jjbkj")
+
+[node name="ufo" type="AudioStreamPlayer2D" parent="f1"]
+stream = ExtResource("8_y3y55")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Label" type="Label" parent="."]
+visible = false
+offset_left = 685.0
+offset_top = 412.0
+offset_right = 889.0
+offset_bottom = 439.0
+text = "Press space for next scene"
+
+[node name="f6" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(450, 224.5)
+scale = Vector2(1.875, 1.67778)
+texture = ExtResource("3_oemso")
+
+[node name="ColorRect" type="ColorRect" parent="f6"]
+offset_left = -240.0
+offset_top = 97.0
+offset_right = 246.0
+offset_bottom = 137.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="f6"]
+offset_left = -231.467
+offset_top = 106.987
+offset_right = 209.533
+offset_bottom = 148.987
+theme_override_fonts/font = ExtResource("3_8rk36")
+theme_override_font_sizes/font_size = 8
+text = "Do not interfere or experience our wrath :<"
+autowrap_mode = 2
+
+[node name="Label2" type="Label" parent="f6"]
+offset_left = 89.6
+offset_top = 121.291
+offset_right = 237.6
+offset_bottom = 144.291
+theme_override_fonts/font = ExtResource("3_8rk36")
+theme_override_font_sizes/font_size = 8
+text = "Press space to continue"
+
+[node name="title" type="Sprite2D" parent="."]
+position = Vector2(453, 227)
+texture = ExtResource("10_12scp")
+
+[node name="Label" type="Label" parent="title"]
+offset_left = -315.0
+offset_top = 66.0
+offset_right = -108.0
+offset_bottom = 100.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_8rk36")
+theme_override_font_sizes/font_size = 14
+text = "Click space to start"
+autowrap_mode = 2
+
+[node name="title" type="AudioStreamPlayer2D" parent="title"]
+stream = ExtResource("9_p1fr0")

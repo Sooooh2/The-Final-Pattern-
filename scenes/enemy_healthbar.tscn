@@ -1,0 +1,82 @@
+[gd_scene load_steps=3 format=3 uid="uid://bm4wbh1gbyoik"]
+
+[ext_resource type="Script" uid="uid://3jei13fn2abs" path="res://script/enemy_healthbar.gd" id="1_bwlof"]
+[ext_resource type="Texture2D" uid="uid://c6533o3ab3vns" path="res://assets/gui/healthbar.png" id="1_mpxl6"]
+
+[node name="enemy_healthbar" type="Node2D"]
+script = ExtResource("1_bwlof")
+
+[node name="100" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(2, 2)
+texture = ExtResource("1_mpxl6")
+hframes = 11
+
+[node name="90" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(2, 2)
+texture = ExtResource("1_mpxl6")
+hframes = 11
+frame = 1
+
+[node name="80" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(2, 2)
+texture = ExtResource("1_mpxl6")
+hframes = 11
+frame = 2
+
+[node name="70" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(2, 2)
+texture = ExtResource("1_mpxl6")
+hframes = 11
+frame = 3
+
+[node name="60" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(2, 2)
+texture = ExtResource("1_mpxl6")
+hframes = 11
+frame = 4
+
+[node name="50" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(2, 2)
+texture = ExtResource("1_mpxl6")
+hframes = 11
+frame = 5
+
+[node name="40" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(2, 2)
+texture = ExtResource("1_mpxl6")
+hframes = 11
+frame = 6
+
+[node name="30" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(2, 2)
+texture = ExtResource("1_mpxl6")
+hframes = 11
+frame = 7
+
+[node name="20" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(2, 2)
+texture = ExtResource("1_mpxl6")
+hframes = 11
+frame = 8
+
+[node name="10" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_mpxl6")
+hframes = 11
+frame = 9
+
+[node name="0" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(2, 2)
+texture = ExtResource("1_mpxl6")
+hframes = 11
+frame = 1

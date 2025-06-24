@@ -1,0 +1,153 @@
+[gd_scene load_steps=7 format=3 uid="uid://bj52kdb4gmmeu"]
+
+[ext_resource type="Texture2D" uid="uid://bhbcdbpebf1ud" path="res://assets/player/Ship 2.png" id="1_55422"]
+
+[sub_resource type="GDScript" id="GDScript_55422"]
+script/source = "extends CharacterBody2D
+
+# Variables for small enemy
+signal healthChanged
+@export var speed: float = 50.0
+@export var currHealth: int = 30  # Less health than main enemy
+@export var fire_rate: float = 2.0  # Slower fire rate
+@export var bullet_spawn_distance: float = 25.0
+
+var player: Node2D = null
+var time_since_last_shot = 0.0
+var floating_health_bar: Node2D = null
+
+# Preload bullet scene
+const bulletEPre = preload(\"res://scenes/enemy_bullet.tscn\")
+# Preload floating health bar scene
+const FloatingHealthBarScene = preload(\"res://scenes/small_en_healthbar.tscn\")
+
+func _ready():
+	add_to_group(\"small_enemy\")
+	player = get_tree().get_first_node_in_group(\"player\")
+	
+	# Create floating health bar
+	create_floating_health_bar()
+
+func create_floating_health_bar():
+	# Instantiate floating health bar
+	floating_health_bar = FloatingHealthBarScene.instantiate()
+	get_parent().add_child(floating_health_bar)
+	
+	# Connect it to this enemy
+	floating_health_bar.setup_for_enemy(self)
+
+func take_damage(amount: int):
+	currHealth -= amount
+	print(\"Small enemy took \", amount, \" damage. Health: \", currHealth)
+	healthChanged.emit()
+	
+	if currHealth <= 0:
+		die()
+
+func die():
+	print(\"Small enemy died!\")
+	# Remove floating health bar
+	if floating_health_bar and is_instance_valid(floating_health_bar):
+		floating_health_bar.queue_free()
+	
+	# Optional: Drop power-up, play death sound, etc.
+	queue_free()
+
+func _physics_process(delta):
+	if player == null:
+		return
+	
+	time_since_last_shot += delta
+	
+	# Simple AI: Move toward player but stop at a certain distance
+	var distance_to_player = global_position.distance_to(player.global_position)
+	var direction = global_position.direction_to(player.global_position)
+	
+	# Move toward player but maintain some distance
+	if distance_to_player > 150:  # Keep some distance
+		velocity = direction * speed
+		move_and_slide()
+	else:
+		velocity = Vector2.ZERO
+		move_and_slide()
+	
+	# Shoot at player occasionally
+	if time_since_last_shot >= fire_rate:
+		shoot_at_player()
+		time_since_last_shot = 0.0
+	
+	# Simple rotation to face player
+	look_at(player.global_position)
+
+func shoot_at_player():
+	if player == null:
+		return
+	
+	var bullet = bulletEPre.instantiate()
+	var dir_to_player = (player.global_position - global_position).normalized()
+	
+	bullet.global_position = global_position + (dir_to_player * bullet_spawn_distance)
+	bullet.direction = dir_to_player
+	
+	get_parent().add_child(bullet)
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ehae5"]
+size = Vector2(10, 7)
+
+[sub_resource type="Animation" id="Animation_ehae5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_55422"]
+resource_name = "small_ship"
+length = 2.1
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(-0.0333333, 0.266667, 0.566667, 0.866667, 1.16667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ehae5"]
+_data = {
+&"RESET": SubResource("Animation_ehae5"),
+&"small_ship": SubResource("Animation_55422")
+}
+
+[node name="small_enemy" type="CharacterBody2D"]
+script = SubResource("GDScript_55422")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("1_55422")
+hframes = 5
+frame = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -0.5)
+scale = Vector2(1.5, 1.5)
+shape = SubResource("RectangleShape2D_ehae5")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_ehae5")
+}

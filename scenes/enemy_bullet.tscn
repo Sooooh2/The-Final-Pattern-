@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://evdqw0iotoex"]
+
+[ext_resource type="Texture2D" uid="uid://cie5qvqejtodb" path="res://assets/player/bullet1-sheet.png" id="1_1xapl"]
+[ext_resource type="Script" uid="uid://c2i7bqv0nfigc" path="res://script/enemy_buller.gd" id="1_qx7rs"]
+[ext_resource type="AudioStream" uid="uid://36fr77dnpgml" path="res://assets/audio/video-game-hit-noise-001-135821.mp3" id="3_38r62"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gl7bs"]
+size = Vector2(5.6523, 5.64636)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_qx7rs")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_1xapl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(7.45058e-08, -8.9407e-08)
+rotation = 0.798542
+shape = SubResource("RectangleShape2D_gl7bs")
+
+[node name="hit_sfx" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_38r62")
+volume_db = -17.0

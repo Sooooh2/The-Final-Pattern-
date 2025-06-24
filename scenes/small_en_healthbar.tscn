@@ -1,0 +1,167 @@
+[gd_scene load_steps=3 format=3 uid="uid://cym3217lr6whb"]
+
+[ext_resource type="Texture2D" uid="uid://c6533o3ab3vns" path="res://assets/gui/healthbar.png" id="1_r74bi"]
+
+[sub_resource type="GDScript" id="GDScript_r74bi"]
+script/source = "extends Node2D
+
+# Reference to the enemy this health bar belongs to
+var target_enemy: CharacterBody2D = null
+
+# Offset above the enemy
+@export var offset_above_enemy: Vector2 = Vector2(0, -40)
+
+# Health bar background and foreground
+@onready var health_bg = $HealthBackground  # Background sprite/rect
+@onready var health_fg = $HealthForeground  # Foreground sprite/rect that will be scaled
+
+# Alternative: Use a ProgressBar node instead of sprites
+@onready var progress_bar = $ProgressBar  # If you prefer using a ProgressBar node
+
+# For sprite-based health bars
+var max_width: float = 0.0
+
+func _ready():
+	# Store the original width for scaling
+	if health_fg:
+		max_width = health_fg.scale.x
+	
+	# Hide initially until connected to an enemy
+	visible = false
+
+# Connect this health bar to a specific enemy
+func setup_for_enemy(enemy: CharacterBody2D):
+	target_enemy = enemy
+	
+	# Connect to enemy's health signal
+	if enemy.has_signal(\"healthChanged\"):
+		enemy.healthChanged.connect(_on_enemy_health_changed)
+		print(\"Floating health bar connected to enemy\")
+	
+	# Show the health bar
+	visible = true
+	
+	# Initial health display
+	update_health_display()
+
+func _on_enemy_health_changed():
+	update_health_display()
+
+func update_health_display():
+	if not target_enemy:
+		return
+	
+	var current_health = target_enemy.currHealth
+	var max_health = 100  # Assuming max health is 100
+	var health_percentage = float(current_health) / float(max_health)
+	
+	# Method 1: Using ProgressBar (easier)
+	if progress_bar:
+		progress_bar.value = health_percentage * 100
+	
+	# Method 2: Using sprites with scaling (more customizable)
+	if health_fg:
+		health_fg.scale.x = max_width * health_percentage
+		
+		# Optional: Change color based on health
+		if health_percentage > 0.6:
+			health_fg.modulate = Color.GREEN
+		elif health_percentage > 0.3:
+			health_fg.modulate = Color.YELLOW
+		else:
+			health_fg.modulate = Color.RED
+
+func _process(delta):
+	# Follow the enemy
+	if target_enemy and is_instance_valid(target_enemy):
+		global_position = target_enemy.global_position + offset_above_enemy
+	else:
+		# Enemy is dead or invalid, hide/remove this health bar
+		queue_free()
+
+# Optional: Smooth following with interpolation
+func _process_smooth(delta):
+	if target_enemy and is_instance_valid(target_enemy):
+		var target_pos = target_enemy.global_position + offset_above_enemy
+		global_position = global_position.lerp(target_pos, 5.0 * delta)  # Smooth following
+	else:
+		queue_free()
+"
+
+[node name="small_en_healthbar" type="Node2D"]
+script = SubResource("GDScript_r74bi")
+
+[node name="100" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(2, 2)
+texture = ExtResource("1_r74bi")
+hframes = 11
+
+[node name="90" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(2, 2)
+texture = ExtResource("1_r74bi")
+hframes = 11
+frame = 1
+
+[node name="80" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(2, 2)
+texture = ExtResource("1_r74bi")
+hframes = 11
+frame = 2
+
+[node name="70" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(2, 2)
+texture = ExtResource("1_r74bi")
+hframes = 11
+frame = 3
+
+[node name="60" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(2, 2)
+texture = ExtResource("1_r74bi")
+hframes = 11
+frame = 4
+
+[node name="50" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(2, 2)
+texture = ExtResource("1_r74bi")
+hframes = 11
+frame = 5
+
+[node name="40" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(2, 2)
+texture = ExtResource("1_r74bi")
+hframes = 11
+frame = 6
+
+[node name="30" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(2, 2)
+texture = ExtResource("1_r74bi")
+hframes = 11
+frame = 7
+
+[node name="20" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(2, 2)
+texture = ExtResource("1_r74bi")
+hframes = 11
+frame = 8
+
+[node name="10" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(2, 2)
+texture = ExtResource("1_r74bi")
+hframes = 11
+frame = 9
+
+[node name="0" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_r74bi")
+hframes = 11
+frame = 10

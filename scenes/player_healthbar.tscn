@@ -1,0 +1,73 @@
+[gd_scene load_steps=3 format=3 uid="uid://dy1hlee11r6wa"]
+
+[ext_resource type="Script" uid="uid://si7eirqan8xo" path="res://script/player_healthbar.gd" id="1_jf4sj"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_5e2k1"]
+load_path = "res://.godot/imported/healthbar.png-4ecb575740948d5386fa0e68ccb0298c.ctex"
+
+[node name="player_healthbar" type="Node2D"]
+script = ExtResource("1_jf4sj")
+
+[node name="100" type="Sprite2D" parent="."]
+texture = SubResource("CompressedTexture2D_5e2k1")
+hframes = 11
+
+[node name="90" type="Sprite2D" parent="."]
+visible = false
+texture = SubResource("CompressedTexture2D_5e2k1")
+hframes = 11
+frame = 1
+
+[node name="80" type="Sprite2D" parent="."]
+visible = false
+texture = SubResource("CompressedTexture2D_5e2k1")
+hframes = 11
+frame = 2
+
+[node name="70" type="Sprite2D" parent="."]
+visible = false
+texture = SubResource("CompressedTexture2D_5e2k1")
+hframes = 11
+frame = 3
+
+[node name="60" type="Sprite2D" parent="."]
+visible = false
+texture = SubResource("CompressedTexture2D_5e2k1")
+hframes = 11
+frame = 4
+
+[node name="50" type="Sprite2D" parent="."]
+visible = false
+texture = SubResource("CompressedTexture2D_5e2k1")
+hframes = 11
+frame = 5
+
+[node name="40" type="Sprite2D" parent="."]
+visible = false
+texture = SubResource("CompressedTexture2D_5e2k1")
+hframes = 11
+frame = 6
+
+[node name="30" type="Sprite2D" parent="."]
+visible = false
+texture = SubResource("CompressedTexture2D_5e2k1")
+hframes = 11
+frame = 7
+
+[node name="20" type="Sprite2D" parent="."]
+visible = false
+texture = SubResource("CompressedTexture2D_5e2k1")
+hframes = 11
+frame = 8
+
+[node name="10" type="Sprite2D" parent="."]
+visible = false
+texture = SubResource("CompressedTexture2D_5e2k1")
+hframes = 11
+frame = 9
+
+[node name="0" type="Sprite2D" parent="."]
+visible = false
+texture = SubResource("CompressedTexture2D_5e2k1")
+hframes = 11
+frame = 10
