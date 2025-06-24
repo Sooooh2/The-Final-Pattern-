@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://qoporbnn65tg"
-path="res://.godot/imported/guy whale canvo.png-dbe4baf7443be79da602bfcf0a75daf8.ctex"
+uid="uid://ddp61dyh4aarv"
+path="res://.godot/imported/guy whale canvo.png-1e25d4e39870d9d8c40c15643d4bbb74.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/enemy/guy whale canvo.png"
-dest_files=["res://.godot/imported/guy whale canvo.png-dbe4baf7443be79da602bfcf0a75daf8.ctex"]
+source_file="res://assets/bg/guy whale canvo.png"
+dest_files=["res://.godot/imported/guy whale canvo.png-1e25d4e39870d9d8c40c15643d4bbb74.ctex"]
 
 [params]
 

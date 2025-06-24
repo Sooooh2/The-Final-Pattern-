@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://dfsj4rkoppvyj" path="res://script/game.gd" id="1_p57ef"]
 [ext_resource type="PackedScene" uid="uid://dymbpcll8wid1" path="res://scenes/enemy.tscn" id="2_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://cid4d1v7a7y5t" path="res://scenes/player.tscn" id="3_iywne"]
-[ext_resource type="AudioStream" uid="uid://xtly6jq3fjuf" path="res://assets/player/8bit-music-for-game-68698.mp3" id="5_u5sy4"]
+[ext_resource type="AudioStream" uid="uid://xtly6jq3fjuf" path="res://assets/audio/8bit-music-for-game-68698.mp3" id="5_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://dy1hlee11r6wa" path="res://scenes/player_healthbar.tscn" id="7_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://bm4wbh1gbyoik" path="res://scenes/enemy_healthbar.tscn" id="8_gee14"]
 

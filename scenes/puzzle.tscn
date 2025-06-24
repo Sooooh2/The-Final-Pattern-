@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://6gnampcfavbt"]
 
-[ext_resource type="Script" uid="uid://dlx0yxt0s8kpu" path="res://scenes/puzzle.gd" id="1_3asjn"]
+[ext_resource type="Script" uid="uid://dlx0yxt0s8kpu" path="res://script/puzzle.gd" id="1_3asjn"]
 [ext_resource type="Texture2D" uid="uid://b47pm4gjx2pdg" path="res://assets/bg/constellation.png" id="1_5ifmx"]
 [ext_resource type="FontFile" uid="uid://c0mbq8w41h7cw" path="res://assets/audio/PixelOperator8.ttf" id="3_t8qc4"]
-[ext_resource type="AudioStream" uid="uid://xtly6jq3fjuf" path="res://assets/player/8bit-music-for-game-68698.mp3" id="4_3asjn"]
+[ext_resource type="AudioStream" uid="uid://xtly6jq3fjuf" path="res://assets/audio/8bit-music-for-game-68698.mp3" id="4_3asjn"]
 
 [node name="puzzle" type="Node2D"]
 script = ExtResource("1_3asjn")

@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://jl02vl863p6j"]
 
-[ext_resource type="Texture2D" uid="uid://ddp61dyh4aarv" path="res://scenes/guy whale canvo.png" id="1_u1mnf"]
-[ext_resource type="Script" uid="uid://d0dgp4ajkxx02" path="res://scenes/whale_convo.gd" id="1_xlnqh"]
+[ext_resource type="Texture2D" uid="uid://ddp61dyh4aarv" path="res://assets/bg/guy whale canvo.png" id="1_u1mnf"]
+[ext_resource type="Script" uid="uid://d0dgp4ajkxx02" path="res://script/whale_convo.gd" id="1_xlnqh"]
 [ext_resource type="FontFile" uid="uid://c0mbq8w41h7cw" path="res://assets/audio/PixelOperator8.ttf" id="2_bpnjy"]
 [ext_resource type="Texture2D" uid="uid://b47pm4gjx2pdg" path="res://assets/bg/constellation.png" id="4_btwqr"]
-[ext_resource type="AudioStream" uid="uid://br028xa8w88wk" path="res://scenes/magical-transition-144153.mp3" id="5_4317f"]
+[ext_resource type="AudioStream" uid="uid://br028xa8w88wk" path="res://assets/audio/magical-transition-144153.mp3" id="5_4317f"]
 
 [node name="whale_convo" type="Node2D"]
 script = ExtResource("1_xlnqh")

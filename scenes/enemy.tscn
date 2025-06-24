@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bhmmyqv7eydkw" path="res://script/enemy.gd" id="1_4gyqm"]
 [ext_resource type="Texture2D" uid="uid://bhbcdbpebf1ud" path="res://assets/player/Ship 2.png" id="2_md0e3"]
-[ext_resource type="AudioStream" uid="uid://djjssf71ophox" path="res://scenes/game-explosion-321700.mp3" id="3_4ra3w"]
+[ext_resource type="AudioStream" uid="uid://b44f5ag4me2hu" path="res://assets/audio/game-explosion-321700.mp3" id="3_4ra3w"]
 
 [sub_resource type="Animation" id="Animation_5uy6h"]
 length = 0.001

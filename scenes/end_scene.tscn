@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://322li7kscesr"]
 
-[ext_resource type="Script" uid="uid://dp7mhxf80pomm" path="res://scenes/end_scene.gd" id="1_85q8e"]
-[ext_resource type="Texture2D" uid="uid://ddp61dyh4aarv" path="res://scenes/guy whale canvo.png" id="1_s7dif"]
+[ext_resource type="Script" uid="uid://dp7mhxf80pomm" path="res://script/end_scene.gd" id="1_85q8e"]
+[ext_resource type="Texture2D" uid="uid://ddp61dyh4aarv" path="res://assets/bg/guy whale canvo.png" id="1_s7dif"]
 [ext_resource type="FontFile" uid="uid://c0mbq8w41h7cw" path="res://assets/audio/PixelOperator8.ttf" id="2_85q8e"]
-[ext_resource type="AudioStream" uid="uid://br028xa8w88wk" path="res://scenes/magical-transition-144153.mp3" id="4_fjxr3"]
+[ext_resource type="AudioStream" uid="uid://br028xa8w88wk" path="res://assets/audio/magical-transition-144153.mp3" id="4_fjxr3"]
 
 [node name="end_scene" type="Node2D"]
 script = ExtResource("1_85q8e")

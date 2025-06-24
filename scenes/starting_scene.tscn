@@ -7,8 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://d0n0ieyxtlton" path="res://assets/bg/frame3.png" id="3_oemso"]
 [ext_resource type="Texture2D" uid="uid://bv5oar2bdf4eb" path="res://assets/bg/frame2.png" id="4_eq0bj"]
 [ext_resource type="AudioStream" uid="uid://chuudqo30qu1i" path="res://assets/audio/creepy-whale-song-323612.mp3" id="6_oemso"]
-[ext_resource type="AudioStream" uid="uid://3trn26qjqcqo" path="res://scenes/space-ship-bridge-loop-104525.mp3" id="8_y3y55"]
-[ext_resource type="AudioStream" uid="uid://br028xa8w88wk" path="res://scenes/magical-transition-144153.mp3" id="9_p1fr0"]
+[ext_resource type="AudioStream" uid="uid://3trn26qjqcqo" path="res://assets/audio/space-ship-bridge-loop-104525.mp3" id="8_y3y55"]
+[ext_resource type="AudioStream" uid="uid://br028xa8w88wk" path="res://assets/audio/magical-transition-144153.mp3" id="9_p1fr0"]
 [ext_resource type="Texture2D" uid="uid://t6utlm345u7f" path="res://assets/bg/PLANET111Q1 - Copy.jpg" id="10_12scp"]
 
 [node name="starting_scene" type="Node2D"]

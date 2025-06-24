@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bhbcdbpebf1ud" path="res://assets/player/Ship 2.png" id="1_sycxx"]
 [ext_resource type="Script" uid="uid://uey2r0g825vq" path="res://script/smaller_enemey.gd" id="1_xbxxl"]
-[ext_resource type="AudioStream" uid="uid://cx3oemwqwsbj" path="res://assets/player/achievement-video-game-type-1-230515.mp3" id="3_xbxxl"]
+[ext_resource type="AudioStream" uid="uid://cx3oemwqwsbj" path="res://assets/audio/achievement-video-game-type-1-230515.mp3" id="3_xbxxl"]
 
 [sub_resource type="Animation" id="Animation_5uy6h"]
 length = 0.001

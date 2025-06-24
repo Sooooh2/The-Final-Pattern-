@@ -2,13 +2,13 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-uid="uid://b44f5ag4me2hu"
-path="res://.godot/imported/game-explosion-321700.mp3-b91ed94868c8f48e06b45022be8bf1dd.mp3str"
+uid="uid://djjssf71ophox"
+path="res://.godot/imported/game-explosion-321700.mp3-cebbd07b9b4e9a92f8150060598c9898.mp3str"
 
 [deps]
 
-source_file="res://assets/audio/game-explosion-321700.mp3"
-dest_files=["res://.godot/imported/game-explosion-321700.mp3-b91ed94868c8f48e06b45022be8bf1dd.mp3str"]
+source_file="res://scenes/game-explosion-321700.mp3"
+dest_files=["res://.godot/imported/game-explosion-321700.mp3-cebbd07b9b4e9a92f8150060598c9898.mp3str"]
 
 [params]
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dj41kr4v0f7bn"]
 
 [ext_resource type="Texture2D" uid="uid://da4fkwvrgfgg1" path="res://assets/bg/planet.png" id="1_to4c7"]
-[ext_resource type="Script" uid="uid://dfr68pby470vs" path="res://scenes/lost_game_1.gd" id="1_ulnjx"]
+[ext_resource type="Script" uid="uid://dfr68pby470vs" path="res://script/lost_game_1.gd" id="1_ulnjx"]
 [ext_resource type="FontFile" uid="uid://c0mbq8w41h7cw" path="res://assets/audio/PixelOperator8.ttf" id="2_ulnjx"]
 [ext_resource type="Texture2D" uid="uid://m684mp2ltc7y" path="res://scenes/PLANET111Q1 - Copy.png" id="3_ux7wd"]
 
